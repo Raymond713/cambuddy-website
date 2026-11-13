@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CamBuddy - 私隱政策 Privacy Policy</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #FFFDF8 0%, #FBF6EB 50%, #FFF0E1 100%);
+            color: #2D2A26;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-amber-500 selection:text-white flex flex-col min-h-screen">
+
+    <!-- Header Navigation -->
+    <nav class="container mx-auto px-6 py-5 flex justify-between items-center border-b border-amber-900/10">
+        <a href="index.html" class="text-xl md:text-2xl font-bold flex items-center gap-3 tracking-wide hover:opacity-90 transition">
+            <img src="icon.png" alt="CamBuddy Icon" class="w-9 h-9 rounded-xl shadow-md border border-amber-900/10">
+            <span class="bg-gradient-to-r from-amber-700 to-orange-600 bg-clip-text text-transparent font-extrabold" data-lang="navTitle">CamBuddy</span>
+        </a>
+        <div class="flex items-center gap-4 md:gap-6">
+            <a href="index.html" data-lang="navHome" class="text-amber-900/70 hover:text-amber-900 transition text-sm md:text-base font-medium">返回主頁</a>
+
+            <div class="relative inline-block text-left">
+                <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-white/85 text-amber-900 border border-amber-900/20 rounded-xl px-3 py-1.5 text-xs md:text-sm focus:outline-none focus:border-amber-600 cursor-pointer shadow-sm">
+                    <option value="zh-HK">繁體中文</option>
+                    <option value="zh-CN">简体中文</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="container mx-auto px-6 py-12 flex-grow max-w-4xl">
+        <div class="bg-white/70 backdrop-blur-md border border-amber-900/10 rounded-3xl p-6 md:p-12 shadow-xl">
+            <h1 class="text-3xl md:text-4xl font-extrabold mb-2 tracking-tight text-amber-950" data-lang="pageTitle">私隱政策 Privacy Policy</h1>
+            <p class="text-xs md:text-sm text-orange-600 font-mono mb-8 font-semibold" data-lang="lastUpdated">最後更新日期：2026年11月</p>
+
+            <div class="space-y-8 text-amber-900/80 leading-relaxed text-sm md:text-base">
+
+                <section>
+                    <p data-lang="introText">
+                        CamBuddy (本服務) 非常重視您的個人私隱。本私隱政策說明我們如何處理您在存取與使用 CamBuddy 應用程式時的相關數據與權限。
+                    </p>
+                </section>
+
+                <hr class="border-amber-900/10">
+
+                <section>
+                    <h2 class="text-xl font-bold text-amber-950 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-wifi text-orange-600"></i> <span data-lang="sec1Title">本地連線與數據隱私 (Local Connectivity &amp; Privacy)</span>
+                    </h2>
+                    <p class="mb-3" data-lang="sec1Desc">
+                        CamBuddy 是一款雙機遠端相機控制應用程式。「相機主機端」與「遙控端」之間的即時畫面、相片與控制指令，只會經由主機端自行建立的配對熱點 (Local-Only Hotspot)，或兩部手機所連接的同一個 Wi-Fi 網路，在兩部手機之間直接傳輸。
+                    </p>
+                    <p class="font-semibold text-orange-700" data-lang="sec1Highlight">
+                        我們不會將您的任何相片、影片、即時畫面或個人數據上傳至任何雲端伺服器或第三方。所有拍攝的相片與影片只會儲存在您的手機上（「CamBuddy」相簿），而且不含任何位置資訊。
+                    </p>
+                </section>
+
+                <hr class="border-amber-900/10">
+
+                <section>
+                    <h2 class="text-xl font-bold text-amber-950 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-key text-orange-600"></i> <span data-lang="sec2Title">應用程式權限使用說明 (App Permissions)</span>
+                    </h2>
+                    <p class="mb-3" data-lang="sec2Desc">
+                        為提供完整的遙控拍攝功能，應用程式會在需要時要求以下系統權限：
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-amber-900/90 pl-2">
+                        <li><strong class="text-amber-950 font-semibold" data-lang="permCamTitle">相機權限 (Camera)：</strong><span data-lang="permCamDesc">讓「相機主機端」取景、拍照與錄影，以及讓「遙控端」掃描 QR Code 進行配對。</span></li>
+                        <li><strong class="text-amber-950 font-semibold" data-lang="permMicTitle">麥克風權限 (Microphone)：</strong><span data-lang="permMicDesc">只在「相機主機端」錄影時使用，用於錄下影片的聲音。聲音只會儲存在影片檔案中，不會傳送到任何地方。</span></li>
+                        <li><strong class="text-amber-950 font-semibold" data-lang="permLocTitle">位置與附近裝置權限 (Location / Nearby Wi-Fi Devices)：</strong><span data-lang="permLocDesc">Android 系統要求此權限才能建立配對熱點（Android 12 或以前為「位置」權限，Android 13 或以後為「附近的 Wi-Fi 裝置」權限）。CamBuddy 不會讀取、記錄或追蹤您的位置。</span></li>
+                        <li><strong class="text-amber-950 font-semibold" data-lang="permStorageTitle">儲存權限 (Storage)：</strong><span data-lang="permStorageDesc">只有 Android 9 或以前的手機需要，用於將相片與影片儲存到相簿（DCIM/CamBuddy）。Android 10 或以後不需要此權限。</span></li>
+                        <li><strong class="text-amber-950 font-semibold" data-lang="permNetTitle">網路與 Wi-Fi 狀態權限 (Network / Wi-Fi)：</strong><span data-lang="permNetDesc">用於兩部手機之間的直接連線，以及讓遙控端加入主機的配對熱點。CamBuddy 本身不會連線到任何網際網路伺服器。</span></li>
+                    </ul>
+                </section>
+
+                <hr class="border-amber-900/10">
+
+                <section>
+                    <h2 class="text-xl font-bold text-amber-950 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-orange-600"></i> <span data-lang="sec3Title">第三方服務 (Third-Party Services)</span>
+                    </h2>
+                    <p class="mb-3" data-lang="sec3Desc">
+                        CamBuddy 使用 Google ML Kit 在手機上直接辨識 QR Code，QR Code 的內容與鏡頭畫面不會被傳送出去。Google ML Kit 會向 Google 傳送匿名的診斷與使用數據，例如手機型號、Android 版本、應用程式名稱與版本、效能數據及錯誤代碼，以改善其服務。這些數據經 HTTPS 加密傳送，不包含您的相片、影片或個人身份資料，Google 亦不會將其分享給其他第三方。CamBuddy 沒有使用任何廣告、統計分析或崩潰回報服務。
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-orange-700 text-sm font-medium pl-2">
+                        <li><a href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank" rel="noopener noreferrer" class="hover:underline">Google ML Kit Data Disclosure</a></li>
+                        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="hover:underline">Google Privacy Policy</a></li>
+                    </ul>
+                </section>
+
+                <hr class="border-amber-900/10">
+
+                <section>
+                    <h2 class="text-xl font-bold text-amber-950 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-arrows-rotate text-orange-600"></i> <span data-lang="sec4Title">條款變更 (Changes to This Policy)</span>
+                    </h2>
+                    <p data-lang="sec4Desc">
+                        我們可能會不定期更新私隱政策。建議您定期瀏覽此頁面以了解最新變更。更新後的私隱政策一經在此頁面發布即刻生效。
+                    </p>
+                </section>
+
+                <hr class="border-amber-900/10">
+
+                <section>
+                    <h2 class="text-xl font-bold text-amber-950 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-orange-600"></i> <span data-lang="sec5Title">聯絡我們 (Contact Us)</span>
+                    </h2>
+                    <p data-lang="sec5Desc">
+                        如果您對本私隱政策有任何疑問或建議，歡迎透過 Google Play 商店 CamBuddy 頁面上列出的開發者電郵與我們聯絡。
+                    </p>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-amber-900/10 py-8 text-center text-xs text-amber-900/60">
+        <p>&copy; 2026 <span data-lang="navTitle">CamBuddy</span>. All rights reserved. Designed by Raymond.</p>
+        <p class="mt-2">
+           <a href="privacy.html" class="text-amber-900/80 hover:text-orange-600 underline transition">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <script>
+        const langData = {
+            'zh-HK': {
+                docTitle: 'CamBuddy - 私隱政策 Privacy Policy',
+                navTitle: 'CamBuddy',
+                navHome: '返回主頁',
+                pageTitle: '私隱政策 Privacy Policy',
+                lastUpdated: '最後更新日期：2026年11月',
+                introText: 'CamBuddy (本服務) 非常重視您的個人私隱。本私隱政策說明我們如何處理您在存取與使用 CamBuddy 應用程式時的相關數據與權限。',
+                sec1Title: '本地連線與數據隱私 (Local Connectivity & Privacy)',
+                sec1Desc: 'CamBuddy 是一款雙機遠端相機控制應用程式。「相機主機端」與「遙控端」之間的即時畫面、相片與控制指令，只會經由主機端自行建立的配對熱點 (Local-Only Hotspot)，或兩部手機所連接的同一個 Wi-Fi 網路，在兩部手機之間直接傳輸。',
+                sec1Highlight: '我們不會將您的任何相片、影片、即時畫面或個人數據上傳至任何雲端伺服器或第三方。所有拍攝的相片與影片只會儲存在您的手機上（「CamBuddy」相簿），而且不含任何位置資訊。',
+                sec2Title: '應用程式權限使用說明 (App Permissions)',
+                sec2Desc: '為提供完整的遙控拍攝功能，應用程式會在需要時要求以下系統權限：',
+                permCamTitle: '相機權限 (Camera)：',
+                permCamDesc: '讓「相機主機端」取景、拍照與錄影，以及讓「遙控端」掃描 QR Code 進行配對。',
+                permMicTitle: '麥克風權限 (Microphone)：',
+                permMicDesc: '只在「相機主機端」錄影時使用，用於錄下影片的聲音。聲音只會儲存在影片檔案中，不會傳送到任何地方。',
+                permLocTitle: '位置與附近裝置權限 (Location / Nearby Wi-Fi Devices)：',
+                permLocDesc: 'Android 系統要求此權限才能建立配對熱點（Android 12 或以前為「位置」權限，Android 13 或以後為「附近的 Wi-Fi 裝置」權限）。CamBuddy 不會讀取、記錄或追蹤您的位置。',
+                permStorageTitle: '儲存權限 (Storage)：',
+                permStorageDesc: '只有 Android 9 或以前的手機需要，用於將相片與影片儲存到相簿（DCIM/CamBuddy）。Android 10 或以後不需要此權限。',
+                permNetTitle: '網路與 Wi-Fi 狀態權限 (Network / Wi-Fi)：',
+                permNetDesc: '用於兩部手機之間的直接連線，以及讓遙控端加入主機的配對熱點。CamBuddy 本身不會連線到任何網際網路伺服器。',
+                sec3Title: '第三方服務 (Third-Party Services)',
+                sec3Desc: 'CamBuddy 使用 Google ML Kit 在手機上直接辨識 QR Code，QR Code 的內容與鏡頭畫面不會被傳送出去。Google ML Kit 會向 Google 傳送匿名的診斷與使用數據，例如手機型號、Android 版本、應用程式名稱與版本、效能數據及錯誤代碼，以改善其服務。這些數據經 HTTPS 加密傳送，不包含您的相片、影片或個人身份資料，Google 亦不會將其分享給其他第三方。CamBuddy 沒有使用任何廣告、統計分析或崩潰回報服務。',
+                sec4Title: '條款變更 (Changes to This Policy)',
+                sec4Desc: '我們可能會不定期更新私隱政策。建議您定期瀏覽此頁面以了解最新變更。更新後的私隱政策一經在此頁面發布即刻生效。',
+                sec5Title: '聯絡我們 (Contact Us)',
+                sec5Desc: '如果您對本私隱政策有任何疑問或建議，歡迎透過 Google Play 商店 CamBuddy 頁面上列出的開發者電郵與我們聯絡。'
+            },
+            'zh-CN': {
+                docTitle: 'CamBuddy - 隐私政策 Privacy Policy',
+                navTitle: 'CamBuddy',
+                navHome: '返回首页',
+                pageTitle: '隐私政策 Privacy Policy',
+                lastUpdated: '最后更新日期：2026年11月',
+                introText: 'CamBuddy (本服务) 非常重视您的个人隐私。本隐私政策说明我们如何处理您在访问与使用 CamBuddy 应用程序时的相关数据与权限。',
+                sec1Title: '本地连接与数据隐私 (Local Connectivity & Privacy)',
+                sec1Desc: 'CamBuddy 是一款双机远程相机控制应用程序。“相机主机端”与“遥控端”之间的实时画面、照片与控制指令，只会通过主机端自行建立的配对热点 (Local-Only Hotspot)，或两部手机所连接的同一个 Wi-Fi 网络，在两部手机之间直接传输。',
+                sec1Highlight: '我们不会将您的任何照片、视频、实时画面或个人数据上传至任何云端服务器或第三方。所有拍摄的照片与视频只会保存在您的手机上（“CamBuddy”相册），而且不含任何位置信息。',
+                sec2Title: '应用程序权限使用说明 (App Permissions)',
+                sec2Desc: '为提供完整的遥控拍摄功能，应用程序会在需要时要求以下系统权限：',
+                permCamTitle: '相机权限 (Camera)：',
+                permCamDesc: '让“相机主机端”取景、拍照与录像，以及让“遥控端”扫描 QR Code 进行配对。',
+                permMicTitle: '麦克风权限 (Microphone)：',
+                permMicDesc: '只在“相机主机端”录像时使用，用于录下视频的声音。声音只会保存在视频文件中，不会发送到任何地方。',
+                permLocTitle: '位置与附近设备权限 (Location / Nearby Wi-Fi Devices)：',
+                permLocDesc: 'Android 系统要求此权限才能建立配对热点（Android 12 或以前为“位置”权限，Android 13 或以后为“附近的 Wi-Fi 设备”权限）。CamBuddy 不会读取、记录或追踪您的位置。',
+                permStorageTitle: '存储权限 (Storage)：',
+                permStorageDesc: '只有 Android 9 或以前的手机需要，用于将照片与视频保存到相册（DCIM/CamBuddy）。Android 10 或以后不需要此权限。',
+                permNetTitle: '网络与 Wi-Fi 状态权限 (Network / Wi-Fi)：',
+                permNetDesc: '用于两部手机之间的直接连接，以及让遥控端加入主机的配对热点。CamBuddy 本身不会连接到任何互联网服务器。',
+                sec3Title: '第三方服务 (Third-Party Services)',
+                sec3Desc: 'CamBuddy 使用 Google ML Kit 在手机上直接识别 QR Code，QR Code 的内容与镜头画面不会被发送出去。Google ML Kit 会向 Google 发送匿名的诊断与使用数据，例如手机型号、Android 版本、应用程序名称与版本、性能数据及错误代码，以改善其服务。这些数据经 HTTPS 加密传输，不包含您的照片、视频或个人身份信息，Google 亦不会将其分享给其他第三方。CamBuddy 没有使用任何广告、统计分析或崩溃报告服务。',
+                sec4Title: '条款变更 (Changes to This Policy)',
+                sec4Desc: '我们可能会不定期更新隐私政策。建议您定期浏览此页面以了解最新变更。更新后的隐私政策一经在此页面发布即刻生效。',
+                sec5Title: '联系我们 (Contact Us)',
+                sec5Desc: '如果您对本隐私政策有任何疑问或建议，欢迎通过 Google Play 商店 CamBuddy 页面上列出的开发者邮箱与我们联系。'
+            },
+            'en': {
+                docTitle: 'CamBuddy - Privacy Policy',
+                navTitle: 'CamBuddy',
+                navHome: 'Back to Home',
+                pageTitle: 'Privacy Policy',
+                lastUpdated: 'Last updated: November 2026',
+                introText: 'CamBuddy values your privacy. This Privacy Policy explains how data and permissions are handled when you use the CamBuddy app.',
+                sec1Title: 'Local Connectivity & Data Privacy',
+                sec1Desc: 'CamBuddy lets one phone remotely control the camera of another. The live preview, photos and control commands travel directly between your two phones, either over the pairing hotspot the Camera Host creates itself (Local-Only Hotspot) or over a Wi-Fi network both phones are on.',
+                sec1Highlight: 'We DO NOT upload your photos, videos, live camera view or personal data to any cloud server or third party. All photos and videos are saved only on your phone (in the "CamBuddy" album) and contain no location data.',
+                sec2Title: 'App Permissions',
+                sec2Desc: 'To provide its remote photography features, CamBuddy asks for the following permissions when they are needed:',
+                permCamTitle: 'Camera: ',
+                permCamDesc: 'Lets the Camera Host frame, take photos and record videos, and lets the Controller scan the pairing QR code.',
+                permMicTitle: 'Microphone: ',
+                permMicDesc: 'Used only while the Camera Host records a video, to capture its sound. The audio is stored only in the video file and is never sent anywhere.',
+                permLocTitle: 'Location / Nearby Wi-Fi Devices: ',
+                permLocDesc: 'Android requires this permission to create the pairing hotspot (Location on Android 12 and earlier, Nearby Wi-Fi Devices on Android 13 and later). CamBuddy never reads, records or tracks your location.',
+                permStorageTitle: 'Storage: ',
+                permStorageDesc: 'Needed only on Android 9 and earlier, to save photos and videos to your gallery (DCIM/CamBuddy). Android 10 and later need no storage permission.',
+                permNetTitle: 'Network / Wi-Fi state: ',
+                permNetDesc: 'Used for the direct connection between your two phones and for the Controller to join the Camera Host\'s pairing hotspot. CamBuddy itself never connects to any internet server.',
+                sec3Title: 'Third-Party Services',
+                sec3Desc: 'CamBuddy uses Google ML Kit to read QR codes on your phone; the QR code contents and camera images are never sent anywhere. Google ML Kit sends Google anonymous diagnostic and usage data, such as device model, Android version, app name and version, performance metrics and error codes, to improve its service. This data is encrypted in transit (HTTPS), contains none of your photos, videos or personal identity, and is not shared with other third parties. CamBuddy uses no advertising, analytics or crash-reporting services.',
+                sec4Title: 'Changes to This Privacy Policy',
+                sec4Desc: 'We may update our Privacy Policy periodically. You are advised to review this page for any updates. Changes take effect immediately upon posting on this page.',
+                sec5Title: 'Contact Us',
+                sec5Desc: 'If you have any questions or suggestions regarding our Privacy Policy, please contact us at the developer email listed on CamBuddy\'s Google Play Store page.'
+            }
+        };
+
+        function changeLanguage(lang) {
+            const data = langData[lang];
+            if (!data) return;
+
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                const key = element.getAttribute('data-lang');
+                if (data[key]) {
+                    element.textContent = data[key];
+                }
+            });
+
+            // Keep the page language and browser tab title in step with the chosen language
+            document.documentElement.lang = lang;
+            document.title = data.docTitle;
+
+            localStorage.setItem('preferredLang', lang);
+        }
+
+        window.onload = function() {
+            const savedLang = localStorage.getItem('preferredLang') || 'zh-HK';
+            document.getElementById('langSelect').value = savedLang;
+            changeLanguage(savedLang);
+        };
+    </script>
+</body>
+</html>

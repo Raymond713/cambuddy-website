@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CamBuddy - 輕鬆雙機遙控相機 (即將上架)</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #FFFDF8 0%, #FBF6EB 50%, #FFF0E1 100%);
+            color: #2D2A26;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-amber-500 selection:text-white flex flex-col min-h-screen">
+
+    <!-- Header Navigation -->
+    <nav class="container mx-auto px-6 py-5 flex justify-between items-center border-b border-amber-900/10">
+        <div class="text-xl md:text-2xl font-bold flex items-center gap-3 tracking-wide">
+            <img src="icon.png" alt="CamBuddy Icon" class="w-10 h-10 rounded-2xl shadow-md border border-amber-900/10">
+            <span class="bg-gradient-to-r from-amber-700 to-orange-600 bg-clip-text text-transparent font-extrabold" data-lang="navTitle">CamBuddy</span>
+        </div>
+        <div class="flex items-center gap-4 md:gap-6">
+            <a href="#features" data-lang="navFeatures" class="text-amber-900/70 hover:text-amber-900 transition text-sm md:text-base hidden sm:inline font-medium">功能特點</a>
+            <a href="#howitworks" data-lang="navHow" class="text-amber-900/70 hover:text-amber-900 transition text-sm md:text-base hidden sm:inline font-medium">如何運作</a>
+            <a href="#download" data-lang="navDownload" class="text-amber-900/70 hover:text-amber-900 transition text-sm md:text-base hidden sm:inline font-medium">即將推出</a>
+
+            <div class="relative inline-block text-left">
+                <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-white/85 text-amber-900 border border-amber-900/20 rounded-xl px-3 py-1.5 text-xs md:text-sm focus:outline-none focus:border-amber-600 cursor-pointer shadow-sm">
+                    <option value="zh-HK">繁體中文</option>
+                    <option value="zh-CN">简体中文</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="container mx-auto px-6 pt-12 pb-16 flex flex-col items-center text-center max-w-4xl flex-grow">
+        <!-- App Logo & Title Banner -->
+        <div class="mb-6 flex flex-col items-center">
+            <div class="w-24 h-24 rounded-3xl shadow-xl overflow-hidden border-2 border-white mb-4 bg-white flex items-center justify-center">
+                <img src="icon.png" alt="CamBuddy Logo" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-4" data-lang-html="heroTitle">
+                兩部手機，<span class="bg-gradient-to-r from-amber-700 to-orange-600 bg-clip-text text-transparent">完美無縫遙控</span>
+            </h1>
+            <p class="text-amber-900/80 text-base md:text-lg max-w-2xl leading-relaxed" data-lang="heroDesc">
+                不用複雜設定。CamBuddy 把一部手機變成遠端相機，另一部變成遙控器，遙控拍照、錄影都輕輕鬆鬆。
+            </p>
+        </div>
+
+        <!-- Call to Action Buttons -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mb-14 w-full sm:w-auto">
+            <div class="bg-gradient-to-r from-amber-700 to-orange-600 text-white px-8 py-3.5 rounded-2xl font-bold text-base shadow-xl shadow-orange-600/20 flex items-center justify-center gap-2 opacity-95">
+                <i class="fa-brands fa-google-play"></i> <span data-lang="btnDownload">Google Play 即將上架</span>
+            </div>
+            <a href="#features" class="bg-white/70 hover:bg-white text-amber-900 border border-amber-900/15 px-6 py-3.5 rounded-2xl font-bold text-base shadow-sm transition flex items-center justify-center gap-2">
+                <span data-lang="btnExplore">了解更多功能</span> <i class="fa-solid fa-arrow-down text-xs"></i>
+            </a>
+        </div>
+
+        <!-- App UI Screenshot Preview (使用真實 UI 截圖) -->
+        <div class="w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border-4 border-white/80 bg-white">
+            <img src="Cambuddy_Screenshot.jpg" alt="CamBuddy App UI Screenshot" class="w-full h-auto object-cover">
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white/40 border-y border-amber-900/10 backdrop-blur-sm">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl font-bold text-center mb-4 tracking-wide text-amber-950" data-lang="featuresTitle">
+                為什麼選擇 CamBuddy？
+            </h2>
+            <p class="text-center text-amber-900/70 mb-16 text-sm md:text-base max-w-xl mx-auto" data-lang="featuresSubtitle">
+                專為情侶合照、戶外旅遊與自拍創作打造的極致體驗
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 bg-white/80 rounded-3xl border border-amber-900/10 shadow-lg hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-950" data-lang="f1Title">極速 QR Code 掃碼直連</h3>
+                    <p class="text-amber-900/70 leading-relaxed text-sm" data-lang="f1Desc">
+                        戶外沒有 Wi-Fi 也可以：主機自動建立配對熱點，一掃 QR Code 就連上，密碼自動輸入。兩部手機在同一個 Wi-Fi 時，更會自動連線。
+                    </p>
+                </div>
+
+                <div class="p-8 bg-white/80 rounded-3xl border border-amber-900/10 shadow-lg hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fa-solid fa-hand-pointer"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-950" data-lang="f2Title">畫面清爽・手勢縮放</h3>
+                    <p class="text-amber-900/70 leading-relaxed text-sm" data-lang="f2Desc">
+                        控制列會自動隱藏，點一下畫面就出現，取景不被遮擋。支援雙指捏合縮放，倍率即時顯示。
+                    </p>
+                </div>
+
+                <div class="p-8 bg-white/80 rounded-3xl border border-amber-900/10 shadow-lg hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-950" data-lang="f3Title">智慧硬體動態適配 (Zoom &amp; EV)</h3>
+                    <p class="text-amber-900/70 leading-relaxed text-sm" data-lang="f3Desc">
+                        自動讀取每部手機不同的鏡頭倍率與曝光補償（EV）範圍，新舊 Android 手機都能順暢使用。
+                    </p>
+                </div>
+
+                <div class="p-8 bg-white/80 rounded-3xl border border-amber-900/10 shadow-lg hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-950" data-lang="f4Title">拍照錄影一手掌握</h3>
+                    <p class="text-amber-900/70 leading-relaxed text-sm" data-lang="f4Desc">
+                        遙控端一鍵切換拍照與錄影，並可控制閃光燈與手電筒。按下快門時畫面閃一下，拍到沒有一看便知。
+                    </p>
+                </div>
+
+                <div class="p-8 bg-white/80 rounded-3xl border border-amber-900/10 shadow-lg hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fa-solid fa-images"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-950" data-lang="f5Title">即拍即看</h3>
+                    <p class="text-amber-900/70 leading-relaxed text-sm" data-lang="f5Desc">
+                        拍完的相片立即傳回遙控端，在快門旁顯示縮圖，點一下就能全螢幕查看，不用走回主機那邊。
+                    </p>
+                </div>
+
+                <div class="p-8 bg-white/80 rounded-3xl border border-amber-900/10 shadow-lg hover:shadow-xl transition group">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fa-solid fa-battery-half"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-950" data-lang="f6Title">省電又整齊</h3>
+                    <p class="text-amber-900/70 leading-relaxed text-sm" data-lang="f6Desc">
+                        連線後主機螢幕會自動變暗省電，鏡頭照常運作。相片與影片集中存放在「CamBuddy」相簿，容易找。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works Section -->
+    <section id="howitworks" class="py-20 container mx-auto px-6 max-w-4xl">
+        <h2 class="text-3xl font-bold text-center mb-4 tracking-wide text-amber-950" data-lang="howTitle">簡單三步，輕鬆遠端拍攝</h2>
+        <p class="text-center text-amber-900/70 mb-16 text-sm md:text-base" data-lang="howSubtitle">流暢直覺的互動，讓拍照變成一種享受</p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white/70 p-6 rounded-3xl border border-amber-900/10 shadow-md text-center">
+                <div class="w-10 h-10 rounded-full bg-orange-500 text-white font-bold flex items-center justify-center mx-auto mb-4 text-sm">1</div>
+                <h4 class="font-bold text-amber-950 mb-2" data-lang="step1Title">設定主機端</h4>
+                <p class="text-xs text-amber-900/70 leading-relaxed" data-lang="step1Desc">將作為相機的手機固定好，並點選「相機主機端」生成專屬 QR Code。</p>
+            </div>
+            <div class="bg-white/70 p-6 rounded-3xl border border-amber-900/10 shadow-md text-center">
+                <div class="w-10 h-10 rounded-full bg-orange-500 text-white font-bold flex items-center justify-center mx-auto mb-4 text-sm">2</div>
+                <h4 class="font-bold text-amber-950 mb-2" data-lang="step2Title">掃碼遙控連線</h4>
+                <p class="text-xs text-amber-900/70 leading-relaxed" data-lang="step2Desc">拿著另一部手機點選「遙控端」，掃描主機 QR Code 即可瞬間完成配對。</p>
+            </div>
+            <div class="bg-white/70 p-6 rounded-3xl border border-amber-900/10 shadow-md text-center">
+                <div class="w-10 h-10 rounded-full bg-orange-500 text-white font-bold flex items-center justify-center mx-auto mb-4 text-sm">3</div>
+                <h4 class="font-bold text-amber-950 mb-2" data-lang="step3Title">享受完美構圖</h4>
+                <p class="text-xs text-amber-900/70 leading-relaxed" data-lang="step3Desc">在遙控端即時預覽畫面、雙指縮放、調整 EV，輕鬆遙控拍照或錄影！</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status / Pre-launch Section -->
+    <section id="download" class="container mx-auto px-6 py-16 text-center max-w-3xl">
+        <div class="bg-gradient-to-br from-amber-900 to-orange-950 text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden flex flex-col items-center">
+            <h2 class="text-3xl font-bold mb-4" data-lang="statusTitle">即將於 Google Play 上架</h2>
+            <p class="text-amber-100/80 mb-8 text-sm md:text-base max-w-md mx-auto leading-relaxed" data-lang="statusDesc">
+                CamBuddy 目前正在進行最後的測試與準備工作。敬請期待全新清新奶油風與雙機遙控體驗！
+            </p>
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-3.5 rounded-2xl font-bold text-lg shadow-xl flex items-center gap-3 cursor-default">
+                <i class="fa-brands fa-google-play text-2xl text-orange-400"></i>
+                <span data-lang="btnDownloadBottom">即將推出 敬請期待</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-amber-900/10 py-8 text-center text-xs text-amber-900/60">
+        <p>&copy; 2026 <span data-lang="navTitle">CamBuddy</span>. All rights reserved. Designed by Raymond.</p>
+        <p class="mt-2">
+           <a href="privacy.html" class="text-amber-900/80 hover:text-orange-600 underline transition">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <!-- JS 多國語言切換邏輯 (修復版) -->
+    <script>
+        const langData = {
+            'zh-HK': {
+                docTitle: 'CamBuddy - 輕鬆雙機遙控相機 (即將上架)',
+                navTitle: 'CamBuddy',
+                navFeatures: '功能特點',
+                navHow: '如何運作',
+                navDownload: '即將推出',
+                heroTitle: '兩部手機，<span class="bg-gradient-to-r from-amber-700 to-orange-600 bg-clip-text text-transparent">完美無縫遙控</span>',
+                heroDesc: '不用複雜設定。CamBuddy 把一部手機變成遠端相機，另一部變成遙控器，遙控拍照、錄影都輕輕鬆鬆。',
+                btnDownload: 'Google Play 即將上架',
+                btnDownloadBottom: '即將推出 敬請期待',
+                btnExplore: '了解更多功能',
+                featuresTitle: '為什麼選擇 CamBuddy？',
+                featuresSubtitle: '專為情侶合照、戶外旅遊與自拍創作打造的極致體驗',
+                f1Title: '極速 QR Code 掃碼直連',
+                f1Desc: '戶外沒有 Wi-Fi 也可以：主機自動建立配對熱點，一掃 QR Code 就連上，密碼自動輸入。兩部手機在同一個 Wi-Fi 時，更會自動連線。',
+                f2Title: '畫面清爽・手勢縮放',
+                f2Desc: '控制列會自動隱藏，點一下畫面就出現，取景不被遮擋。支援雙指捏合縮放，倍率即時顯示。',
+                f3Title: '智慧硬體動態適配 (Zoom & EV)',
+                f3Desc: '自動讀取每部手機不同的鏡頭倍率與曝光補償（EV）範圍，新舊 Android 手機都能順暢使用。',
+                f4Title: '拍照錄影一手掌握',
+                f4Desc: '遙控端一鍵切換拍照與錄影，並可控制閃光燈與手電筒。按下快門時畫面閃一下，拍到沒有一看便知。',
+                f5Title: '即拍即看',
+                f5Desc: '拍完的相片立即傳回遙控端，在快門旁顯示縮圖，點一下就能全螢幕查看，不用走回主機那邊。',
+                f6Title: '省電又整齊',
+                f6Desc: '連線後主機螢幕會自動變暗省電，鏡頭照常運作。相片與影片集中存放在「CamBuddy」相簿，容易找。',
+                howTitle: '簡單三步，輕鬆遠端拍攝',
+                howSubtitle: '流暢直覺的互動，讓拍照變成一種享受',
+                step1Title: '設定主機端',
+                step1Desc: '將作為相機的手機固定好，並點選「相機主機端」生成專屬 QR Code。',
+                step2Title: '掃碼遙控連線',
+                step2Desc: '拿著另一部手機點選「遙控端」，掃描主機 QR Code 即可瞬間完成配對。',
+                step3Title: '享受完美構圖',
+                step3Desc: '在遙控端即時預覽畫面、雙指縮放、調整 EV，輕鬆遙控拍照或錄影！',
+                statusTitle: '即將於 Google Play 上架',
+                statusDesc: 'CamBuddy 目前正在進行最後的測試與準備工作。敬請期待全新清新奶油風與雙機遙控體驗！'
+            },
+            'zh-CN': {
+                docTitle: 'CamBuddy - 轻松双机遥控相机 (即将上架)',
+                navTitle: 'CamBuddy',
+                navFeatures: '功能特点',
+                navHow: '如何运作',
+                navDownload: '即将推出',
+                heroTitle: '两部手机，<span class="bg-gradient-to-r from-amber-700 to-orange-600 bg-clip-text text-transparent">完美无缝遥控</span>',
+                heroDesc: '不用复杂设置。CamBuddy 把一部手机变成远程相机，另一部变成遥控器，遥控拍照、录像都轻轻松松。',
+                btnDownload: 'Google Play 即将上架',
+                btnDownloadBottom: '即将推出 敬请期待',
+                btnExplore: '了解更多功能',
+                featuresTitle: '为什么选择 CamBuddy？',
+                featuresSubtitle: '专为情侣合照、户外旅游与自拍创作打造的极致体验',
+                f1Title: '极速 QR Code 扫码直连',
+                f1Desc: '户外没有 Wi-Fi 也可以：主机自动建立配对热点，一扫 QR Code 就连上，密码自动输入。两部手机在同一个 Wi-Fi 时，更会自动连接。',
+                f2Title: '画面清爽・手势缩放',
+                f2Desc: '控制栏会自动隐藏，点一下画面就出现，取景不被遮挡。支持双指捏合缩放，倍率实时显示。',
+                f3Title: '智能硬件动态适配 (Zoom & EV)',
+                f3Desc: '自动读取每部手机不同的镜头倍率与曝光补偿（EV）范围，新旧 Android 手机都能顺畅使用。',
+                f4Title: '拍照录像一手掌握',
+                f4Desc: '遥控端一键切换拍照与录像，并可控制闪光灯与手电筒。按下快门时画面闪一下，拍到没有一看便知。',
+                f5Title: '即拍即看',
+                f5Desc: '拍完的照片立即传回遥控端，在快门旁显示缩略图，点一下就能全屏查看，不用走回主机那边。',
+                f6Title: '省电又整齐',
+                f6Desc: '连接后主机屏幕会自动变暗省电，镜头照常运作。照片与视频集中存放在“CamBuddy”相册，容易找。',
+                howTitle: '简单三步，轻松远程拍摄',
+                howSubtitle: '流畅直观的互动，让拍照变成一种享受',
+                step1Title: '设置主机端',
+                step1Desc: '将作为相机的手机固定好，并点击“相机主机端”生成专属 QR Code。',
+                step2Title: '扫码遥控连接',
+                step2Desc: '拿着另一部手机点击“遥控端”，扫描主机 QR Code 即可瞬间完成配对。',
+                step3Title: '享受完美构图',
+                step3Desc: '在遥控端实时预览画面、双指缩放、调整 EV，轻松遥控拍照或录像！',
+                statusTitle: '即将于 Google Play 上架',
+                statusDesc: 'CamBuddy 目前正在进行最后的测试与准备工作。敬请期待全新清新奶油风与双机遥控体验！'
+            },
+            'en': {
+                docTitle: 'CamBuddy - Two-Phone Remote Camera (Coming Soon)',
+                navTitle: 'CamBuddy',
+                navFeatures: 'Features',
+                navHow: 'How It Works',
+                navDownload: 'Coming Soon',
+                heroTitle: 'Two Phones, <span class="bg-gradient-to-r from-amber-700 to-orange-600 bg-clip-text text-transparent">Seamless Remote Control</span>',
+                heroDesc: 'No fiddly setup. CamBuddy turns one phone into a remote camera and the other into its remote control, so taking photos and videos from afar is easy.',
+                btnDownload: 'Coming Soon on Google Play',
+                btnDownloadBottom: 'Coming Soon',
+                btnExplore: 'Explore Features',
+                featuresTitle: 'Why Choose CamBuddy?',
+                featuresSubtitle: 'Built for couples, outdoor travels, and effortless content creation',
+                f1Title: 'Lightning-Fast QR Pairing',
+                f1Desc: 'Works outdoors with no Wi-Fi: the host sets up its own pairing hotspot, and one QR scan connects you, password included. On the same Wi-Fi, the phones find each other automatically.',
+                f2Title: 'Clean View & Gesture Zoom',
+                f2Desc: 'Controls tuck away on their own and come back with a tap, so nothing blocks your framing. Pinch to zoom with a live zoom readout.',
+                f3Title: 'Dynamic Hardware Adaptability',
+                f3Desc: 'Reads each phone\'s own zoom range and exposure (EV) range, so new and older Android phones alike run smoothly.',
+                f4Title: 'Photos & Videos in Your Hand',
+                f4Desc: 'Switch between photo and video with one tap, and control the flash and torch. The view flashes when you press the shutter, so you know the shot was taken.',
+                f5Title: 'See It Right Away',
+                f5Desc: 'Each photo comes straight back to the controller as a thumbnail beside the shutter. Tap it for a full-screen look, with no walking back to the camera.',
+                f6Title: 'Saves Power, Stays Tidy',
+                f6Desc: 'Once connected, the host screen dims itself to save battery while the camera keeps running. Photos and videos are kept together in a "CamBuddy" album.',
+                howTitle: '3 Easy Steps to Shoot',
+                howSubtitle: 'Smooth and intuitive workflow for effortless photography',
+                step1Title: 'Setup Host',
+                step1Desc: 'Position your camera phone and tap "Camera Host" to display the pairing QR Code.',
+                step2Title: 'Scan to Connect',
+                step2Desc: 'Take your controller phone, tap "Controller", and scan the Host QR Code to pair.',
+                step3Title: 'Capture the Moment',
+                step3Desc: 'Preview live, pinch to zoom, adjust EV, and take photos or videos from afar!',
+                statusTitle: 'Coming Soon to Google Play',
+                statusDesc: 'CamBuddy is currently undergoing final testing. Stay tuned for the ultimate remote photography experience!'
+            }
+        };
+
+        function changeLanguage(lang) {
+            const data = langData[lang];
+            if (!data) return;
+
+            // 切換純文字內容
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                const key = element.getAttribute('data-lang');
+                if (data[key]) {
+                    element.textContent = data[key];
+                }
+            });
+
+            // 切換包含 HTML 標籤的內容 (如漸變文字)
+            document.querySelectorAll('[data-lang-html]').forEach(element => {
+                const key = element.getAttribute('data-lang-html');
+                if (data[key]) {
+                    element.innerHTML = data[key];
+                }
+            });
+
+            // 網頁語言與分頁標題跟隨所選語言
+            document.documentElement.lang = lang;
+            document.title = data.docTitle;
+
+            // 儲存使用者的語言偏好到 localStorage
+            localStorage.setItem('preferredLang', lang);
+        }
+
+        // 初始化：載入歷史語言設定或預設繁體中文
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLang') || 'zh-HK';
+            const langSelect = document.getElementById('langSelect');
+            if (langSelect) {
+                langSelect.value = savedLang;
+            }
+            changeLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
